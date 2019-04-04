@@ -1,0 +1,25 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.rtl {
+    direction: rtl;
+    @import "theme/_rtl.scss";
+   }
+   
+.ltr {
+    @import "theme/_ltr.scss";
+   }
+
+   header {
+    background-color: white;
+    display: FLEX;
+  }
+
+   body {
+    background-color: #d4d4d4;
+    margin: 0;
+    }
+
+    main {
+        padding: 2%;
+    }
+

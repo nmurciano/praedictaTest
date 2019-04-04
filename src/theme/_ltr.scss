@@ -1,0 +1,14 @@
+
+  /*** LTR websites ***/
+$direction           :ltr;
+$opposite-direction   :rtl;
+
+$start-direction     :left;
+$end-direction       :right;
+
+//$flexRox    :row;
+
+$transform-direction :1;
+
+@import 'general.scss';
+

@@ -1,0 +1,30 @@
+
+
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+.value-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .matField {
+    width: 100%;
+  }
+  
+  .formDiv {
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto;
+}

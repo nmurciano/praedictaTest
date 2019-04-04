@@ -1,0 +1,87 @@
+
+body{
+    direction: $direction;
+    text-align: $start-direction;
+  }
+
+
+  h1 {
+    text-align: $start-direction;
+    color: red;
+  }
+
+ 
+ 
+  ul.main-nav {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        //flex-direction: $flexRox;
+        max-height: 50px;
+        align-items: center;
+        font-size: 25px;
+    }
+
+  
+    li.navRight {
+      min-width: 20%;
+      display: flex;
+  }
+
+  li.navRight button {
+    margin: auto;
+}
+
+  li.centerItems{
+    margin: auto;
+    display: inline-flex;
+  }
+
+ 
+    button.btnOutline {
+      background: white;
+      border: 1px solid grey;
+      border-radius: 5px;
+      padding: 5px 10px;
+  }
+
+  .centerItems button {
+    background-color: white;
+    border-bottom: 3px solid blue;
+    border-radius: 5px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 5px 15px;
+}
+  
+
+    li.logo{
+      margin-#{$start-direction}: auto;
+    }
+ 
+    
+    li.logo img{
+    max-height: 50px;
+      width: fit-content;
+    }
+
+
+    .myWhiteDiv {
+      position: relative;
+      width: 30%;
+      background-color: white;
+      height: -webkit-fill-available;
+      float: $start-direction;
+  }
+
+  .myBlueDiv {
+    position: relative;
+    width: 70%;
+    background-color: #b1dcfb;
+    height: -webkit-fill-available;
+    float: $end-direction;
+}
+
+
+
