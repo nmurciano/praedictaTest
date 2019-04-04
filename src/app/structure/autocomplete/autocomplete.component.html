@@ -1,7 +1,7 @@
 <div class="formDiv">
   <form class="value-form">
     <mat-form-field class="matField">
-      <input type="text" placeholder="Select or create new" aria-label="Assignee" matInput [formControl]="myControl"
+      <input type="text" placeholder="Select or create new" matInput [formControl]="InputForm"
         [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
@@ -9,8 +9,9 @@
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
-    <button class="btnOutline" *ngIf="showAddButton  && myControl.value" (click)="addValue()">
-      Press "Enter" or Click here to add {{myControl.value}}
+    <button class="btnOutline" *ngIf="showAddButton  && InputForm.value" (click)="addValue()">
+      Press "Enter" or Click here to add {{InputForm.value}}
     </button>
   </form>
+
 </div>

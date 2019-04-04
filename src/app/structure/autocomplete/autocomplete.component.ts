@@ -14,7 +14,7 @@ export class AutocompleteComponent implements OnInit {
   @Input() options: userModel[];
   @Output() addName = new EventEmitter<userModel>();
 
-  myControl = new FormControl();
+  InputForm = new FormControl();
   filteredOptions: Observable<userModel[]>;
   showAddButton: boolean = false;
 
@@ -22,12 +22,13 @@ export class AutocompleteComponent implements OnInit {
 
   ngOnInit() {
 
-    this.filteredOptions = this.myControl.valueChanges
+    this.filteredOptions = this.InputForm.valueChanges
       .pipe(
         startWith<string | userModel>(''),
         map(value => typeof value === 'string' ? value : value.name),
         map(name => name ? this._filter(name) : this.options.slice())
       );
+
   }
 
   displayFn(user?: userModel): string | undefined {
@@ -45,12 +46,15 @@ export class AutocompleteComponent implements OnInit {
 
   addValue() {
 
-    if (!this.options.some(entry => entry === this.myControl.value)) {
+
+
+
+    if (!this.options.some(entry => entry === this.InputForm.value)) {
 
       let newId = this.options[this.options.length - 1].id + 1;
-      let newValue: userModel = { id: newId, name: this.myControl.value };
+      let newValue: userModel = { id: newId, name: this.InputForm.value };
       //const index = this.options.push(newValue) - 1;
-      //this.myControl.setValue(this.options[index]);
+      //this.InputForm.setValue(this.options[index]);
 
       this.addName.emit(newValue);
       this.showAddButton = false;
