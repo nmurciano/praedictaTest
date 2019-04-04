@@ -4,7 +4,7 @@
     <li class="navRight">
       <i class="fas fa-bars"> </i>
       <button class="btnOutline">logout</button>
-      <button class="btnOutline" (click)="changeDir()">Change to {{directionChoice}}</button>
+      <button class="btnOutline" (click)="changeDir()">Change to {{selectedDir == 'rtl' ? 'ltr' : 'rtl'}}</button>
     </li>
 
     <li class="centerItems">
@@ -29,5 +29,5 @@
   </app-blue>
 
   <router-outlet></router-outlet>
-  
+
 </main>

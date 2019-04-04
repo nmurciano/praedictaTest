@@ -12,14 +12,7 @@ export class AppComponent {
 
 
   changeDir() {
-    if (this.selectedDir == 'rtl') {
-      this.selectedDir = "ltr";
-      this.directionChoice = "rtl";
-    }
-    else {
-      this.selectedDir = "rtl";
-      this.directionChoice = "ltr";
-    }
-    //return (this.selectedDir=='rtl' ? this.selectedDir="ltr" : this.selectedDir="rtl");
+    this.selectedDir = this.selectedDir == 'rtl' ? 'ltr' : 'rtl'
+
   }
 }
